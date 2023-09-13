@@ -7,8 +7,8 @@ Instructor: Washington Valencia
 ENTER STUDENT INFORMATION HERE 
 ==========================================
 CCTB project DevOps course
-STUDENT NAME: 
-STUDENT ID:
+STUDENT NAME:  JUAN PABLO ALZATE
+STUDENT ID: CT1001486
 SQAC114
 ==========================================
 
@@ -152,9 +152,17 @@ function AddGroupMember(lastName, firstName) {
 */
 function RemoveGroupMember() {
 
-	throw "ERROR! You must work in this function before to send to Staging Environment!";
+	var selectElement = document.getElementById("members");
+	var selectedIndex = selectElement.selectedIndex;
+
+	if (selectedIndex >=0){
+		selectElement.options[selectedIndex].remove();
+	}
+
 
 }
+
+
 
 /*
 * Function to sort the list of group members in ascending order by last name.
